@@ -89,7 +89,7 @@
         >;
     };
 
-    left_encoder: encoder_left {
+    right_encoder: encoder_right {
         compatible = "alps,ec11";
         a-gpios = <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
@@ -99,7 +99,7 @@
 
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
-        sensors = <&left_encoder>;
+        sensors = <&right_encoder>;
         triggers-per-rotation = <20>;
     };
 };

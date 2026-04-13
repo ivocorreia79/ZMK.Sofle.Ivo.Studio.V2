@@ -11,7 +11,7 @@ include:
       -DCONFIG_BT=y
       -DCONFIG_BT_CENTRAL=y
       -DCONFIG_BT_PERIPHERAL=y
-      -DCONFIG_EC11=n
+      -DCONFIG_EC11=y
       -DCONFIG_ZMK_USB=y
       -DCONFIG_BT_DEVICE_NAME=\"Sofle\"
       -DCONFIG_ZMK_KEYBOARD_NAME=\"Sofle\"

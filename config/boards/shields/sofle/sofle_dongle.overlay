@@ -3,14 +3,12 @@
 
 / {
     chosen {
-        /* Dongle não tem teclas -> kscan falso */
+        /* Dongle não tem teclas físicas, usamos um kscan fictício */
         zmk,kscan = &mock_kscan;
-
-        /* Essencial para ZMK Studio */
+        zmk,matrix-transform = &default_transform;
         zmk,physical-layout = &physical_layout0;
     };
 
-    /* kscan mock */
     mock_kscan: mock_kscan_0 {
         compatible = "zmk,kscan-mock";
         columns = <0>;
@@ -18,25 +16,6 @@
         events = <0>;
     };
 
-    left_encoder: encoder_left {
-        compatible = "alps,ec11";
-        label = "LEFT_ENCODER";
-        a-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <80>;
-        status = "okay";
-    };
-
-    right_encoder: encoder_right {
-        compatible = "alps,ec11";
-        label = "RIGHT_ENCODER";
-        a-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <80>;
-        status = "okay";
-    };
-
-    /* Matrix transform */
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <12>;
@@ -50,12 +29,10 @@
         >;
     };
 
-    /* Physical layout */
     physical_layout0: physical_layout_0 {
         compatible = "zmk,physical-layout";
         display-name = "Sofle";
         transform = <&default_transform>;
-
         keys = <
             <&key_physical_attrs 100 100    0   37    0  0  0>,
             <&key_physical_attrs 100 100  100   37    0  0  0>,

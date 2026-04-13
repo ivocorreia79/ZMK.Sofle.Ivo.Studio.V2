@@ -6,13 +6,13 @@ manifest:
       url-base: https://github.com/cormoran
 
   projects:
-    # ZMK com suporte do protocolo custom do Studio (necessário para RPC)
+    # ZMK oficial (obrigatório para urob/zmk-actions)
     - name: zmk
-      remote: cormoran
-      revision: "v0.3+custom-studio-protocol"
-      import: file: app/west.yml
+      remote: zmkfirmware
+      revision: main
+      import: app/west.yml
 
-    # Módulo runtime para rotação de encoders via ZMK Studio
+    # Módulo runtime para encoders via ZMK Studio
     - name: zmk-behavior-runtime-sensor-rotate
       remote: cormoran
       revision: main

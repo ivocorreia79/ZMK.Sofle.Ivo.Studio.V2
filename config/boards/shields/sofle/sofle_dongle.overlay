@@ -8,8 +8,6 @@
 
         /* Essencial para ZMK Studio */
         zmk,physical-layout = &physical_layout0;
-
-        zmk,matrix-transform = &default_transform;
     };
 
     /* kscan mock */

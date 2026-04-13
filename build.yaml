@@ -16,8 +16,6 @@ include:
       -DCONFIG_BT_PERIPHERAL=y
       -DCONFIG_EC11=n
       -DCONFIG_ZMK_USB=y
-      -DCONFIG_BT_DEVICE_NAME="Sofle"
-      -DCONFIG_ZMK_KEYBOARD_NAME="Sofle"
 
   # -------- LEFT (PERIPHERAL) ----------
   - board: nice_nano
@@ -28,8 +26,6 @@ include:
       -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
       -DCONFIG_EC11=y
       -DCONFIG_EC11_TRIGGER_GLOBAL_THREAD=y
-      -DCONFIG_BT_DEVICE_NAME="SofleL"
-      -DCONFIG_ZMK_KEYBOARD_NAME="SofleL"
 
   # -------- RIGHT (PERIPHERAL) ----------
   - board: nice_nano
@@ -40,8 +36,6 @@ include:
       -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
       -DCONFIG_EC11=y
       -DCONFIG_EC11_TRIGGER_GLOBAL_THREAD=y
-      -DCONFIG_BT_DEVICE_NAME="SofleR"
-      -DCONFIG_ZMK_KEYBOARD_NAME="SofleR"
 
   # -------- RESET ----------
   - board: nice_nano
